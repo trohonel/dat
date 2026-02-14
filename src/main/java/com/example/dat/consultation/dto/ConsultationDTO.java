@@ -1,4 +1,4 @@
-package com.example.dat.cosultation.dto;
+package com.example.dat.consultation.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

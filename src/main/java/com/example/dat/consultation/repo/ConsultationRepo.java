@@ -1,6 +1,6 @@
-package com.example.dat.cosultation.repo;
+package com.example.dat.consultation.repo;
 
-import com.example.dat.cosultation.entity.Consultation;
+import com.example.dat.consultation.entity.Consultation;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

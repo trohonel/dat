@@ -1,4 +1,4 @@
-package com.example.dat.cosultation.entity;
+package com.example.dat.consultation.entity;
 
 import com.example.dat.appointment.entity.Appointment;
 import jakarta.persistence.*;

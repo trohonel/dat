@@ -1,6 +1,6 @@
 package com.example.dat.appointment.entity;
 
-import com.example.dat.cosultation.entity.Consultation;
+import com.example.dat.consultation.entity.Consultation;
 import com.example.dat.doctor.entity.Doctor;
 import com.example.dat.enums.AppointmentStatus;
 import com.example.dat.patient.entity.Patient;
@@ -24,6 +24,7 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String meetingLink;
@@ -35,7 +36,7 @@ public class Appointment {
     @Enumerated(EnumType.STRING)
     private AppointmentStatus status;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doctor_id", nullable = false)
     private Doctor doctor;
 
@@ -45,5 +46,4 @@ public class Appointment {
 
     @OneToOne(mappedBy = "appointment", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Consultation consultation;
-
 }
