@@ -17,7 +17,7 @@ public class RegistrationRequest {
 
     private Specialization specialization; //if user is a doctor specify his specialization
 
-    private String licenceNumber; //if user is a doctor licence number
+    private String licenseNumber; //if user is a doctor licence number
 
     @NotBlank(message = "Email is required")
     @Email

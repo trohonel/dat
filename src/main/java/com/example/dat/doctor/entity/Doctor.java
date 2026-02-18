@@ -29,7 +29,7 @@ public class Doctor {
     @Enumerated(EnumType.STRING)
     private Specialization specialization;
 
-    private String licenceNumber;
+    private String licenseNumber;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", updatable = true, nullable = false)
