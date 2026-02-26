@@ -1,5 +1,6 @@
 package com.example.dat.users.entity;
 
+
 import com.example.dat.role.entity.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,10 +13,11 @@ import java.util.List;
 @Entity
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@Table(name="users")
+@NoArgsConstructor
+@Table(name = "users")
 public class User {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,8 +33,10 @@ public class User {
 
     private String profilePictureUrl;
 
-    @ManyToMany(fetch = FetchType.EAGER,  cascade = CascadeType.ALL)
-    @JoinTable(name="user_roles", joinColumns = @JoinColumn(name = "user_id"),
-    inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<Role> roles;
+
+
 }
